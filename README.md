@@ -38,3 +38,6 @@ public class AppsFlyerObjectScript : MonoBehaviour
 
 ## <a id="api"> 📑 API
   Check out the api [here](/docs/api.md).
+
+
+**Note:** AppsFlyerAdRevenue currently supports iOS AdRevenue with MoPub only.
