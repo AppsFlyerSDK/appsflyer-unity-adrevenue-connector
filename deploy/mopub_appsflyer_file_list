@@ -1,0 +1,6 @@
+Assets/Plugins/iOS/MoPubAppsFlyerAdRevenue/MoPubAdrevenueAppsFlyerWrapper.mm
+Assets/Plugins/iOS/MoPubAppsFlyerAdRevenue/ad-revenue-mopub/libAppsFlyerAdRevenueMoPub.a
+Assets/Plugins/iOS/MoPubAppsFlyerAdRevenue/ad-revenue-mopub/AFADRDelegate.h
+Assets/Plugins/iOS/MoPubAppsFlyerAdRevenue/ad-revenue-mopub/AFADRObject.h
+Assets/Plugins/iOS/MoPubAppsFlyerAdRevenue/ad-revenue-mopub/AFADRWrapper.h
+Assets/Plugins/iOS/MoPubAppsFlyerAdRevenue/ad-revenue-mopub/AppsFlyerAdRevenue.h
