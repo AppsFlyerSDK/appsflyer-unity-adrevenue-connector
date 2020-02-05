@@ -32,7 +32,6 @@
     id delegate = outerDelegate;
     // anyDelegate cannot receive a nil
     if (outerDelegate && [AppsFlyerAdRevenueWrapper isMoPubSet]) {
-        [AppsFlyerAdRevenue start];
         delegate = [[AppsFlyerAdRevenue shared] anyDelegate:outerDelegate adNetworkType:AFADRMoPubAdNetworkType];
     }
     // if we have gotten a nil from outerDelegate - we have to set it also
@@ -54,7 +53,6 @@
     id delegate = outerDelegate;
     // anyDelegate cannot receive a nil
     if (outerDelegate && [AppsFlyerAdRevenueWrapper isMoPubSet]) {
-        [AppsFlyerAdRevenue start];
         delegate = [[AppsFlyerAdRevenue shared] anyDelegate:outerDelegate adNetworkType:AFADRMoPubAdNetworkType];
     }
     // if we have gotten a nil from outerDelegate - we have to set it also
@@ -80,7 +78,6 @@
 }
 
 + (void)adrevenue_setDelegate:(id)delegate forAdUnitId:(id)adUnitId {
-    [AppsFlyerAdRevenue start];
     id AdRevenueDelegate = [[AppsFlyerAdRevenue shared] anyDelegate:delegate adNetworkType:AFADRMoPubAdNetworkType];
     [self adrevenue_setDelegate:AdRevenueDelegate forAdUnitId:adUnitId];
 }

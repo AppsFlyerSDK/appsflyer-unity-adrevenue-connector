@@ -25,7 +25,7 @@
   
 | Setting        | type                            |  description                             |
 | ---------------|-----------------------------    |------------------------------------------|
-| adRevenueType  | params AppsFlyerAdRevenueType[] | AppsFlyerAdRevenueType (MoPub, UnityAds, ect)  |
+| adRevenueType  | params AppsFlyerAdRevenueType[] | AppsFlyerAdRevenueType (MoPub, ect)  |
   
   
   <hr>

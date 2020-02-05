@@ -1,9 +1,9 @@
 Assets/AppsFlyer/AppsFlyerAdRevenue.cs
-Assets/Plugins/iOS/AppsFlyerAdRevenueCore/libAppsFlyerAdRevenue.a
-Assets/Plugins/iOS/AppsFlyerAdRevenueCore/AFADRDelegate.h
-Assets/Plugins/iOS/AppsFlyerAdRevenueCore/AFADRObject.h
-Assets/Plugins/iOS/AppsFlyerAdRevenueCore/AFADRWrapper.h
-Assets/Plugins/iOS/AppsFlyerAdRevenueCore/AppsFlyerAdRevenue.h
-Assets/Plugins/iOS/AppsFlyerAdRevenueCore/AppsFlyerAdRevenueWrapper.mm
-Assets/Plugins/iOS/AppsFlyerAdRevenueCore/AppsFlyerAdRevenueWrapper.h
+Assets/Plugins/iOS/appsflyer-adrevenue/libAppsFlyerAdRevenue.a
+Assets/Plugins/iOS/appsflyer-adrevenue/AFADRDelegate.h
+Assets/Plugins/iOS/appsflyer-adrevenue/AFADRObject.h
+Assets/Plugins/iOS/appsflyer-adrevenue/AFADRWrapper.h
+Assets/Plugins/iOS/appsflyer-adrevenue/AppsFlyerAdRevenue.h
+Assets/Plugins/iOS/appsflyer-adrevenue/AppsFlyerAdRevenueWrapper.mm
+Assets/Plugins/iOS/appsflyer-adrevenue/AppsFlyerAdRevenueWrapper.h
 

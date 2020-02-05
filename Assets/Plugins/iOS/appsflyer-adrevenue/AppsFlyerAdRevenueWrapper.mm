@@ -55,7 +55,6 @@ extern "C" {
         [AppsFlyerAdRevenue start];
     }
     const void _setIsDebug(bool isDebug){
-        [AppsFlyerAdRevenue start];
         [[AppsFlyerAdRevenue shared] setIsDebug:isDebug];
     }
 }

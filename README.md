@@ -15,9 +15,9 @@
 ## <a id="installation"> 📲 Installation
 
 1. Clone / download this repository.
-2. [Import](https://docs.unity3d.com/Manual/AssetPackages.html) AppsFlyer-AdRevenue.unitypackage and AppsFlyer-AdRevenue-MoPub.unitypackage into your Unity project.
+2. [Import](https://docs.unity3d.com/Manual/AssetPackages.html) appsflyer-adrevenue.unitypackage and appsflyer-mopub-adrevenue.unitypackage into your Unity project.
     * Go to Assets >> Import Package >> Custom Package
-    * Select AppsFlyer-AdRevenue.unitypackage and AppsFlyer-AdRevenue-MoPub.unitypackage.
+    * Select appsflyer-adrevenue.unitypackage and appsflyer-mopub-adrevenue.unitypackage.
 
 **Note:** You must have the AppsFlyer SDK already in your project. In addition, make sure to init AppsFlyer SDK before AppsFlyerAdRevenue.
 
