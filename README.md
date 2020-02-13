@@ -13,6 +13,8 @@
 - [API](#api) 
 
 ## <a id="installation"> 📲 Installation
+   
+   This plugin supports Unity plugin version 4.22.x
 
 1. Clone / download this repository.
 2. [Import](https://docs.unity3d.com/Manual/AssetPackages.html) appsflyer-adrevenue.unitypackage and appsflyer-mopub-adrevenue.unitypackage into your Unity project.
