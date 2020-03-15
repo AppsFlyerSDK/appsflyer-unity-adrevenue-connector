@@ -39,6 +39,9 @@
   ```c#
     AppsFlyerAdRevenue.setIsDebug(true);
   ```
+
+  **Note** this API will only set the debug logs for iOS. For Android the debug logs are controlled by the native SDK.
+  To turn on the debug logs on Android call `AppsFlyer.setIsDebug(true);`
   
 | Setting | type   |  description                  |
 | --------|------- |-------------------------------|

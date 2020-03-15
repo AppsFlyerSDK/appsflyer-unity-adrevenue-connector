@@ -1,16 +1,16 @@
 #!/bin/bash
 
-echo "Start Build for appsflyer-adrevenue.unitypackage"
+echo "Start Build for appsflyer-unity-adrevenue-plugin.unitypackage"
 
 DEPLOY_PATH=outputs
 UNITY_PATH="/Applications/Unity/Unity.app/Contents/MacOS/Unity"
-PACKAGE_NAME="appsflyer-adrevenue.unitypackage"
+PACKAGE_NAME="appsflyer-unity-adrevenue-plugin.unitypackage"
 FILE_LIST=$(<unity_package_file_list)
 mkdir -p $DEPLOY_PATH
 
 
 # Build the .unitypackage
-/Applications/Unity/Hub/Editor/2019.3.0f6/Unity.app/Contents/MacOS/Unity \
+/Applications/Unity/Hub/Editor/2019.1.8f1/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
 -logFile create_unity_core.log \
@@ -19,7 +19,7 @@ mkdir -p $DEPLOY_PATH
 $FILE_LIST \
 $PWD/$DEPLOY_PATH/$PACKAGE_NAME \
 -quit \
-&& echo "package exported successfully to outputs/appsflyer-adrevenue.unitypackage" \
+&& echo "package exported successfully to outputs/appsflyer-unity-adrevenue-plugin.unitypackage" \
 || echo "Failed to export package. See create_unity_core.log for more info."
 
 
