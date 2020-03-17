@@ -1,4 +1,5 @@
 Assets/AppsFlyer/AppsFlyerAdRevenue.cs
+
 Assets/Plugins/iOS/appsflyer-adrevenue/libAppsFlyerAdRevenue.a
 Assets/Plugins/iOS/appsflyer-adrevenue/AFADRDelegate.h
 Assets/Plugins/iOS/appsflyer-adrevenue/AFADRObject.h
@@ -7,3 +8,5 @@ Assets/Plugins/iOS/appsflyer-adrevenue/AppsFlyerAdRevenue.h
 Assets/Plugins/iOS/appsflyer-adrevenue/AppsFlyerAdRevenueWrapper.mm
 Assets/Plugins/iOS/appsflyer-adrevenue/AppsFlyerAdRevenueWrapper.h
 
+Assets/Plugins/Android/afunityadrevenueplugin-release.aar
+Assets/Plugins/Android/adrevenue-5.1.0.aar
