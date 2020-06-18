@@ -1,4 +1,4 @@
-package com.appsflyer.unity.adrevenue;
+package com.appsflyer.unity.afunityadrevenueplugin;
 
 import org.junit.Test;
 

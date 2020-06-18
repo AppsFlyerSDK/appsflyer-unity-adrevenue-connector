@@ -1,4 +1,4 @@
-package com.appsflyer.unity.adrevenue;
+package com.appsflyer.unity.afunityadrevenueplugin;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.appsflyer.unity.adrevenue", appContext.getPackageName());
+        assertEquals("com.appsflyer.unity.afunityadrevenueplugin", appContext.getPackageName());
     }
 }
