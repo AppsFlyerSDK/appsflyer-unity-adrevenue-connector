@@ -9,8 +9,6 @@
 
 #if __has_include(<AppsFlyerAdRevenue/AppsFlyerAdRevenue.h>)
 #import <AppsFlyerAdRevenue/AppsFlyerAdRevenue.h>
-#else
-#import "AppsFlyerAdRevenue.h"
 #endif
 
 @interface AppsFlyerAdRevenueWrapper : NSObject
