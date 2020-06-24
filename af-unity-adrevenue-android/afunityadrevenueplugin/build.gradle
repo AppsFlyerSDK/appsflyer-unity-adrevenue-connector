@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 29
-
+    buildToolsVersion "29.0.1"
 
     defaultConfig {
         minSdkVersion 16
@@ -20,43 +20,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-//
-//    sourceSets {
-//        main {
-//            java {
-//                srcDir 'src/main/java'
-//            }
-//            resources {
-//                srcDir 'src/../lib'
-//            }
-//        }
-//    }
 
 }
-
-task deleteJar(type: Delete) {
-    delete 'libs/jars/logmanagementlib.jar'
-}
-
-task createJar(type: Copy) {
-    from('build/intermediates/bundles/release/')
-    into('libs/jars/')
-    include('classes.jar')
-    rename('classes.jar', 'logmanagementlib.jar')
-}
-
-createJar.dependsOn(deleteJar, build)
-
 repositories { maven { url "https://s3.amazonaws.com/moat-sdk-builds" } }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-
     compileOnly 'com.appsflyer:adrevenue:5.1.0'
     compileOnly 'com.mopub:mopub-sdk:5.8.0'
 }
+
+apply from: file('publish.gradle')

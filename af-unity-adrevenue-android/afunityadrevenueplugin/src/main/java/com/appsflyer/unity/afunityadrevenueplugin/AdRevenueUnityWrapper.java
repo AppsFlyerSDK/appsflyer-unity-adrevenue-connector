@@ -1,4 +1,5 @@
 package com.appsflyer.unity.afunityadrevenueplugin;
+
 import android.app.Application;
 import com.appsflyer.adrevenue.AppsFlyerAdRevenue;
 import com.appsflyer.adrevenue.adnetworks.AppsFlyerAdRevenueWrapperType;

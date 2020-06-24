@@ -12,8 +12,8 @@
 #import "MoPubManager.h"
 #endif
 
-#if __has_include("AppsFlyerAdRevenue.h")
-#import "AppsFlyerAdRevenue.h"
+#if __has_include(<AppsFlyerAdRevenue/AppsFlyerAdRevenue.h>)
+#import <AppsFlyerAdRevenue/AppsFlyerAdRevenue.h>
 #endif
 
 #if __has_include("AppsFlyerAdRevenueWrapper.h")
@@ -32,7 +32,8 @@
     id delegate = outerDelegate;
     // anyDelegate cannot receive a nil
     if (outerDelegate && [AppsFlyerAdRevenueWrapper isMoPubSet]) {
-        delegate = [[AppsFlyerAdRevenue shared] anyDelegate:outerDelegate adNetworkType:AFADRMoPubAdNetworkType];
+        delegate = [[AppsFlyerAdRevenue shared] delegate:outerDelegate forProtocol:@protocol(MPInterstitialAdControllerDelegate)];
+
     }
     // if we have gotten a nil from outerDelegate - we have to set it also
     object_setIvar(self, ivarInfo, delegate);
@@ -53,7 +54,7 @@
     id delegate = outerDelegate;
     // anyDelegate cannot receive a nil
     if (outerDelegate && [AppsFlyerAdRevenueWrapper isMoPubSet]) {
-        delegate = [[AppsFlyerAdRevenue shared] anyDelegate:outerDelegate adNetworkType:AFADRMoPubAdNetworkType];
+        delegate = [[AppsFlyerAdRevenue shared] delegate:outerDelegate forProtocol:@protocol(MPAdViewDelegate) ];
     }
     // if we have gotten a nil from outerDelegate - we have to set it also
     object_setIvar(self, ivarInfo, delegate);
@@ -78,7 +79,7 @@
 }
 
 + (void)adrevenue_setDelegate:(id)delegate forAdUnitId:(id)adUnitId {
-    id AdRevenueDelegate = [[AppsFlyerAdRevenue shared] anyDelegate:delegate adNetworkType:AFADRMoPubAdNetworkType];
+    id AdRevenueDelegate = [[AppsFlyerAdRevenue shared] delegate:delegate forProtocol:@protocol(MPRewardedVideoDelegate)];
     [self adrevenue_setDelegate:AdRevenueDelegate forAdUnitId:adUnitId];
 }
 

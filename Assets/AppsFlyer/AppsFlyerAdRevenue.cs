@@ -7,10 +7,11 @@ namespace AppsFlyerSDK
     public class AppsFlyerAdRevenue : MonoBehaviour
     {
 
-        public static readonly string kAppsFlyerAdRevenueVersion = "1.0.0";
+        public static readonly string kAppsFlyerAdRevenueVersion = "2.0.0";
 
+#if UNITY_ANDROID && !UNITY_EDITOR
         private static AndroidJavaClass appsFlyerAndroid = new AndroidJavaClass("com.appsflyer.unity.afunityadrevenueplugin.AdRevenueUnityWrapper");
-
+#endif
 
         public static void start(params AppsFlyerAdRevenueType[] adRevenueType)
         {
@@ -39,7 +40,7 @@ namespace AppsFlyerSDK
         public static void setIsDebug(bool isDebug)
         {
 #if UNITY_IOS && !UNITY_EDITOR
-        _setIsDebug(isDebug);
+        _setIsDebugAdrevenue(isDebug);
 #elif UNITY_ANDROID && !UNITY_EDITOR
 
 #else
@@ -53,7 +54,7 @@ namespace AppsFlyerSDK
     private static extern void _start(int length, params AppsFlyerAdRevenueType[] adRevenueType);
 
     [DllImport("__Internal")]
-    private static extern void _setIsDebug(bool isDebug);
+    private static extern void _setIsDebugAdrevenue(bool isDebug);
 
 #elif UNITY_ANDROID && !UNITY_EDITOR
 

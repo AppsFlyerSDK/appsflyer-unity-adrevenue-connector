@@ -4,22 +4,23 @@ echo "Start Build for appsflyer-unity-adrevenue-plugin.unitypackage"
 
 DEPLOY_PATH=outputs
 UNITY_PATH="/Applications/Unity/Unity.app/Contents/MacOS/Unity"
-PACKAGE_NAME="appsflyer-unity-adrevenue-plugin.unitypackage"
-FILE_LIST=$(<unity_package_file_list)
+PACKAGE_NAME="appsflyer-unity-adrevenue-plugin-2.0.0.unitypackage"
 mkdir -p $DEPLOY_PATH
 
 
 # Build the .unitypackage
 /Applications/Unity/Hub/Editor/2019.1.8f1/Unity.app/Contents/MacOS/Unity \
+-gvh_disable \
 -batchmode \
+-importPackage external-dependency-manager-1.2.144.unitypackage \
 -nographics \
 -logFile create_unity_core.log \
 -projectPath $PWD/../ \
 -exportPackage \
-$FILE_LIST \
+Assets \
 $PWD/$DEPLOY_PATH/$PACKAGE_NAME \
 -quit \
-&& echo "package exported successfully to outputs/appsflyer-unity-adrevenue-plugin.unitypackage" \
+&& echo "package exported successfully to outputs/appsflyer-unity-adrevenue-plugin-2.0.0.unitypackage" \
 || echo "Failed to export package. See create_unity_core.log for more info."
 
 

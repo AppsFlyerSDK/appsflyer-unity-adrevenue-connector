@@ -16,10 +16,12 @@
    
    This plugin supports [Unity plugin](https://github.com/AppsFlyerSDK/Unity) version >= 4.22.x
 
+> ⚠️ There are breaking changes when upgrading from version 1.x to 2.x <br> Starting from v2.x, the plugin uses the The External Dependency Manager for Unity. <br> To support these changes first remove all the files from v1.x and only after that add the v2.x unity package.
+
 1. Clone / download this repository.
-2. [Import](https://docs.unity3d.com/Manual/AssetPackages.html) appsflyer-adrevenue.unitypackage and appsflyer-mopub-adrevenue.unitypackage into your Unity project.
+2. [Import](https://docs.unity3d.com/Manual/AssetPackages.html) appsflyer-unity-adrevenue-plugin-x.x.x.unitypackage  into your Unity project.
     * Go to Assets >> Import Package >> Custom Package
-    * Select appsflyer-unity-adrevenue-plugin.unitypackage and appsflyer-unity-adrevenue-mopub.unitypackage.
+    * Select appsflyer-unity-adrevenue-plugin-x.x.x.unitypackage.
 
 **Note:** You must have the AppsFlyer SDK already in your project. In addition, make sure to init AppsFlyer SDK before AppsFlyerAdRevenue.
 
@@ -39,7 +41,7 @@ public class AppsFlyerObjectScript : MonoBehaviour
 ```
 
 ## <a id="api"> 📑 API
-  Check out the api [here](/docs/api.md).
+  Check out the API [here](/docs/api.md).
 
 
-**Note:** AppsFlyerAdRevenue currently supports MoPub only.
+**Note:** AppsFlyerAdRevenue currently supports MoPub onl

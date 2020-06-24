@@ -6,7 +6,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AppsFlyerAdRevenue.h"
+
+#if __has_include(<AppsFlyerAdRevenue/AppsFlyerAdRevenue.h>)
+#import <AppsFlyerAdRevenue/AppsFlyerAdRevenue.h>
+#endif
 
 @interface AppsFlyerAdRevenueWrapper : NSObject
 + (BOOL)isMoPubSet;
