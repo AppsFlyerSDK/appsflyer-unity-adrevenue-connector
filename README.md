@@ -44,4 +44,4 @@ public class AppsFlyerObjectScript : MonoBehaviour
   Check out the API [here](/docs/api.md).
 
 
-**Note:** AppsFlyerAdRevenue currently supports MoPub onl
+**Note:** AppsFlyerAdRevenue currently supports MoPub only
