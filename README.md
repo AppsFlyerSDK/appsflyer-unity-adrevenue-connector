@@ -14,7 +14,7 @@
 
 ## <a id="installation"> 📲 Installation
    
-   This plugin supports [Unity plugin](https://github.com/AppsFlyerSDK/Unity) version >= 4.22.x
+   This plugin requires minumium AppsFlyer Unity plugin version >= 4.22.x.
 
 > ⚠️ There are breaking changes when upgrading from version 1.x to 2.x <br> Starting from v2.x, the plugin uses the The External Dependency Manager for Unity. <br> To support these changes first remove all the files from v1.x and only after that add the v2.x unity package.
 
