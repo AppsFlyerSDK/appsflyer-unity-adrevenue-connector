@@ -6,7 +6,7 @@
   </androidPackages>
 
   <iosPods>
-    <iosPod name="AppsFlyer-AdRevenue-MoPub" version="5.4.1" minTargetSdk="8.0">
+    <iosPod name="AppsFlyer-AdRevenue-MoPub" version="6.0.5" minTargetSdk="8.0">
     </iosPod>
   </iosPods>
 
