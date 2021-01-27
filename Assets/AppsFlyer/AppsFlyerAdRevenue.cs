@@ -7,7 +7,7 @@ namespace AppsFlyerSDK
     public class AppsFlyerAdRevenue : MonoBehaviour
     {
 
-        public static readonly string kAppsFlyerAdRevenueVersion = "6.0.5";
+        public static readonly string kAppsFlyerAdRevenueVersion = "6.1.2";
 
 #if UNITY_ANDROID && !UNITY_EDITOR
         private static AndroidJavaClass appsFlyerAndroid = new AndroidJavaClass("com.appsflyer.unity.afunityadrevenueplugin.AdRevenueUnityWrapper");
