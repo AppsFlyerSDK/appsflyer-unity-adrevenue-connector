@@ -4,7 +4,7 @@ echo "Start Build for appsflyer-unity-adrevenue-plugin.unitypackage"
 
 DEPLOY_PATH=outputs
 UNITY_PATH="/Applications/Unity/Unity.app/Contents/MacOS/Unity"
-PACKAGE_NAME="appsflyer-unity-adrevenue-plugin-6.3.0.unitypackage"
+PACKAGE_NAME="appsflyer-unity-adrevenue-plugin-6.3.1.unitypackage"
 mkdir -p $DEPLOY_PATH
 
 
@@ -20,11 +20,11 @@ mkdir -p $DEPLOY_PATH
 Assets \
 $PWD/$DEPLOY_PATH/$PACKAGE_NAME \
 -quit \
-&& echo "package exported successfully to outputs/appsflyer-unity-adrevenue-plugin-6.3.3.unitypackage" \
+&& echo "package exported successfully to outputs/appsflyer-unity-adrevenue-plugin-6.3.1.unitypackage" \
 || echo "Failed to export package. See create_unity_core.log for more info."
 
 
-if [ $1 == "-p" ]; then
+if [ "$1" == "-p" ]; then
 echo "removing ./Library"
 rm -rf ../Library
 echo "removing ./Logs"
