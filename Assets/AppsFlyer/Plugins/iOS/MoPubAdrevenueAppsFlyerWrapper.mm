@@ -63,8 +63,7 @@
 
 @end
 
-@implementation MPRewardedVideo(AppsFlyerAdRevenueProxy)
-
+@implementation MPRewardedAds(AppsFlyerAdRevenueProxy)
 
 + (void)load {
     static dispatch_once_t onceToken;
@@ -79,7 +78,7 @@
 }
 
 + (void)adrevenue_setDelegate:(id)delegate forAdUnitId:(id)adUnitId {
-    id AdRevenueDelegate = [[AppsFlyerAdRevenue shared] delegate:delegate forProtocol:@protocol(MPRewardedVideoDelegate)];
+    id AdRevenueDelegate = [[AppsFlyerAdRevenue shared] delegate:delegate forProtocol:@protocol(MPRewardedAdsDelegate)];
     [self adrevenue_setDelegate:AdRevenueDelegate forAdUnitId:adUnitId];
 }
 
