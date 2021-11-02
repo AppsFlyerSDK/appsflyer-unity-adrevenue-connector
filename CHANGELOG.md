@@ -1,3 +1,6 @@
+### 6.4.2
+* Updated AppsFlyer-AdRevenue-MoPub to version 6.4.2
+
 ### 6.2.2
 * Updated AppsFlyer-AdRevenue-MoPub to version 6.2.2
 
