@@ -21,7 +21,7 @@ namespace AppsFlyerSDK
         _start(adRevenueType.Length, adRevenueType);
 
 #elif UNITY_ANDROID && !UNITY_EDITOR
-        if (adRevenueType == MoPub) {
+        
 
                 using(AndroidJavaClass cls_UnityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer")) {
 
@@ -29,21 +29,16 @@ namespace AppsFlyerSDK
 
                     AndroidJavaObject cls_Application = cls_Activity.Call<AndroidJavaObject>("getApplication");
 
-                    appsFlyerAndroid.CallStatic("start", cls_Application); 
+                        if (adRevenueType == MoPub) {
+
+                                appsFlyerAndroid.CallStatic("start", cls_Application);
+
+                        } else {
+
+                                appsFlyerAndroid.CallStatic("startGeneric", cls_Application); 
+                        } 
                 }
             } 
-        } else if (adRevenueType == Generic) {
-                using(AndroidJavaClass cls_UnityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer")) {
-
-                using(AndroidJavaObject cls_Activity = cls_UnityPlayer.GetStatic<AndroidJavaObject>("currentActivity")) {
-
-                    AndroidJavaObject cls_Application = cls_Activity.Call<AndroidJavaObject>("getApplication");
-
-                    appsFlyerAndroid.CallStatic("startGeneric", cls_Application); 
-                }
-            }   
-        }
-           
 
 #else
 
