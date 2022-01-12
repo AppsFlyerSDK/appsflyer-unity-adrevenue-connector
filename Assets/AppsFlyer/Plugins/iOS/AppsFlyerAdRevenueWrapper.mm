@@ -57,6 +57,14 @@ extern "C" {
     const void _setIsDebugAdrevenue(bool isDebug){
         [[AppsFlyerAdRevenue shared] setIsDebug:isDebug];
     }
+
+    const void _logAdRevenue(const char* monetizationNetwork, int mediationNetwork, float eventRevenue, const char* revenueCurrency, const char* additionalParameters){
+           [[AppsFlyerAdRevenue shared] logAdRevenueWithMonetizationNetwork:stringFromChar(monetizationNetwork)
+                                                       mediationNetwork:(AppsFlyerAdRevenueMediationNetworkType) mediationNetwork
+                                                               eventRevenue:[NSNumber numberWithFloat:eventRevenue]
+                                                       revenueCurrency:stringFromChar(revenueCurrency)
+                                                       additionalParameters:dictionaryFromJson(additionalParameters)];
+    }   
 }
 
 @end
