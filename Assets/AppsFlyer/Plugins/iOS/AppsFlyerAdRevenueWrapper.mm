@@ -26,18 +26,20 @@ extern "C" {
     void setAppsFlyerAdRevenueType(int type){
         switch (type){
             case 0:
-                AdRevenueTypeMoPub = YES;
                 break;
             case 1:
-                AdRevenueTypeUnityAds = YES;
+                AdRevenueTypeMoPub = YES;
                 break;
             case 2:
-                AdRevenueTypeFacebookAudience = YES;
+                AdRevenueTypeUnityAds = YES;
                 break;
             case 3:
-                AdRevenueTypeGoogleAdMob = YES;
+                AdRevenueTypeFacebookAudience = YES;
                 break;
             case 4:
+                AdRevenueTypeGoogleAdMob = YES;
+                break;
+            case 5:
                 AdRevenueTypeAppLovin = YES;
                 break;
             default:
