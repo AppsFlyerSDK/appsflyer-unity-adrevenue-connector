@@ -49,7 +49,7 @@
 
   <hr>
   
-##### <a id="logAdRevenue"> `public static void logAdRevenue(string           monetizationNetwork, AppsFlyerAdRevenueMediationNetworkType mediationNetwork double eventRevenue, string revenueCurrency, Dictionary<string, string> additionalParameters)`
+##### <a id="logAdRevenue"> `public static void logAdRevenue(string           monetizationNetwork, AppsFlyerAdRevenueMediationNetworkType mediationNetwork, double eventRevenue, string revenueCurrency, Dictionary<string, string> additionalParameters)`
   
 Allow you send data from the impression payload to AdRevenue no matter which mediation network you use.
 
@@ -61,7 +61,7 @@ Allow you send data from the impression payload to AdRevenue no matter which med
         dic.Add("custom", "foo");
         dic.Add("custom_2", "bar");
         dic.Add("af_quantity", "1");
-        AppsFlyerAdRevenue.logAdRevenue("facebook", (AppsFlyerAdRevenueMediationNetworkType)20, 0.026, "USD", dic);
+        AppsFlyerAdRevenue.logAdRevenue("facebook", AppsFlyerAdRevenueMediationNetworkType.AppsFlyerAdRevenueMediationNetworkTypeMoPub., 0.026, "USD", dic);
   ```
 
   
