@@ -6,7 +6,7 @@ import com.appsflyer.adrevenue.adnetworks.AppsFlyerAdRevenueWrapperType;
 import com.appsflyer.adrevenue.adnetworks.generic.MediationNetwork;
 
 import java.util.Currency;
-import java.util.Map;
+import java.util.HashMap;
 
 public class AdRevenueUnityWrapper {
 
@@ -30,9 +30,14 @@ public class AdRevenueUnityWrapper {
 
     public static void logAdRevenue(String monetizationNetwork,
                                     int mediationNetwork,
-                                    Currency eventRevenueCurrency,
-                                    Double eventRevenue,
-                                    Map<String, String> nonMandatory) {
-        AppsFlyerAdRevenue.logAdRevenue(monetizationNetwork, MediationNetwork.values()[mediationNetwork], eventRevenueCurrency, eventRevenue, nonMandatory);
+                                    String eventRevenueCurrency,
+                                    double eventRevenue,
+                                    HashMap<String, String> nonMandatory) {
+        Currency currency = Currency.getInstance(eventRevenueCurrency);
+        AppsFlyerAdRevenue.logAdRevenue(monetizationNetwork,
+                                        MediationNetwork.values()[mediationNetwork],
+                                        currency,
+                                        eventRevenue,
+                                        nonMandatory);
     }
 }

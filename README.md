@@ -27,6 +27,33 @@
 
 ## <a id="init-sdk"> 🚀 Initialization
 
+## AdRevenue-Generic
+---
+From version `6.4.2` AppsFlyer-AdRevenue provides additional new api that allow you send data from the impression payload to AdRevenue no matter which mediation network you use:
+
+---
+```c#
+using AppsFlyerSDK;
+
+public class AppsFlyerObjectScript : MonoBehaviour
+{
+  void Start()
+  {
+  	AppsFlyerAdRevenue.start(AppsFlyerAdRevenueType.Generic);
+  	/* AppsFlyerAdRevenue.setIsDebug(true); */
+  }
+
+  ....
+
+    Dictionary<string, string> dic = new Dictionary<string, string>();
+    dic.Add("custom", "foo");
+    dic.Add("custom_2", "bar");
+    dic.Add("af_quantity", "1");
+    AppsFlyerAdRevenue.logAdRevenue("facebook", (AppsFlyerAdRevenueMediationNetworkType)20, 0.026, "USD", dic);
+}
+
+## Mopub
+---
 ```c#
 using AppsFlyerSDK;
 

@@ -3,12 +3,6 @@ using UnityEngine;
 
 public class AFAdRevenueEvent {
 
-
-    public const string REVENUE  = "event_revenue";
-    public const string REVENUE_CURRENCY = "event_revenue_currency";
-    public const string CUSTOM_PARAMETERS = "custom_parameters";
-    public const string ENCRYPTED_CPM = "encryptedCPM";
-   
     /**
     *Pre-defined keys for non-mandatory dictionary
     *Code ISO 3166-1 format
