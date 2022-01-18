@@ -2,7 +2,8 @@
 <dependencies>
   <androidPackages>
     <androidPackage spec="com.appsflyer:adrevenue:6.4.3"></androidPackage>
-    <androidPackage spec="com.appsflyer:unity-adrevenue-wrapper:6.4.3"></androidPackage>
+    <androidPackage spec="com.appsflyer:unity-adrevenue-wrapper:6.4.31"></androidPackage>
+    <androidPackage spec="com.mopub:mopub-sdk:5.18.0"></androidPackage>
   </androidPackages>
 
   <iosPods>

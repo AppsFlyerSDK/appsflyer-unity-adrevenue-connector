@@ -14,12 +14,11 @@ namespace AppsFlyerSDK
         private static AndroidJavaClass appsFlyerAndroid = new AndroidJavaClass("com.appsflyer.unity.afunityadrevenueplugin.AdRevenueUnityWrapper");
 #endif
 
-        public static void start(params AppsFlyerAdRevenueType[] adRevenueType)
+        public static void start(params AppsFlyerAdRevenueType[] adRevenueTypes)
         {
-
 #if UNITY_IOS && !UNITY_EDITOR
 
-        _start(adRevenueType.Length, adRevenueType);
+        _start(adRevenueTypes.Length, adRevenueTypes);
 
 #elif UNITY_ANDROID && !UNITY_EDITOR
 
@@ -29,15 +28,7 @@ namespace AppsFlyerSDK
 
                     AndroidJavaObject cls_Application = cls_Activity.Call<AndroidJavaObject>("getApplication");
 
-                        if (adRevenueType[0] == AppsFlyerAdRevenueType.MoPub) {
-
-                                appsFlyerAndroid.CallStatic("start", cls_Application);
-
-                        } else {
-
-                                appsFlyerAndroid.CallStatic("startGeneric", cls_Application);
-
-                        }
+                                appsFlyerAndroid.CallStatic("start", cls_Application, adRevenueTypes.Length, convertEnumArrToInArr(adRevenueTypes));
                 }
             } 
 
@@ -45,6 +36,7 @@ namespace AppsFlyerSDK
 
 #endif
         }
+
 
         public static void setIsDebug(bool isDebug)
         {
@@ -91,7 +83,7 @@ namespace AppsFlyerSDK
 #if UNITY_IOS && !UNITY_EDITOR
         
     [DllImport("__Internal")]
-    private static extern void _start(int length, params AppsFlyerAdRevenueType[] adRevenueType);
+    private static extern void _start(int length, params AppsFlyerAdRevenueType[] adRevenueTypes);
 
     [DllImport("__Internal")]
     private static extern void _setIsDebugAdrevenue(bool isDebug);
@@ -154,6 +146,12 @@ namespace AppsFlyerSDK
             }
 
             return map;
+        }
+
+        private static int[] convertEnumArrToInArr(AppsFlyerAdRevenueType[] adRevenueType)
+        {
+            return Array.ConvertAll<AppsFlyerAdRevenueType, int>(
+                   adRevenueType, delegate (AppsFlyerAdRevenueType value) { return (int)value; });
         }
     }
 

@@ -16,16 +16,24 @@ public class AdRevenueUnityWrapper {
      *
      * @param application
      */
-    public static void start(Application application) {
+    public static void start(Application application,int lenght, int... AdRevenueTypes) {
         AppsFlyerAdRevenue.initialize(new AppsFlyerAdRevenue.Builder(application)
-                .addNetworks(AppsFlyerAdRevenueWrapperType.MOPUB)
                 .build());
-        AppsFlyerAdRevenue.moPubWrapper().recordImpressionData();
+        if (lenght > 0) {
+            for (int i = 0; i < lenght;  i++) {
+                setAppsFlyerAdRevenueType(AdRevenueTypes[i]);
+            }
+        }
     }
 
-    public static void startGeneric(Application application) {
-        AppsFlyerAdRevenue.initialize(new AppsFlyerAdRevenue.Builder(application)
-                .build());
+    private static void setAppsFlyerAdRevenueType(int type) {
+        switch (type) {
+            case 1:
+                AppsFlyerAdRevenue.moPubWrapper().recordImpressionData();
+                break;
+            default:
+                return;
+        }
     }
 
     public static void logAdRevenue(String monetizationNetwork,
