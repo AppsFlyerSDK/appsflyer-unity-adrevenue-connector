@@ -14,11 +14,11 @@ namespace AppsFlyerSDK
         private static AndroidJavaClass appsFlyerAndroid = new AndroidJavaClass("com.appsflyer.unity.afunityadrevenueplugin.AdRevenueUnityWrapper");
 #endif
 
-        public static void start(params AppsFlyerAdRevenueType[] adRevenueType)
+        public static void start(params AppsFlyerAdRevenueType[] adRevenueTypes)
         {
 #if UNITY_IOS && !UNITY_EDITOR
 
-        _start(adRevenueType.Length, adRevenueType);
+        _start(adRevenueTypes.Length, adRevenueTypes);
 
 #elif UNITY_ANDROID && !UNITY_EDITOR
 
@@ -28,7 +28,7 @@ namespace AppsFlyerSDK
 
                     AndroidJavaObject cls_Application = cls_Activity.Call<AndroidJavaObject>("getApplication");
 
-                                appsFlyerAndroid.CallStatic("start", cls_Application, adRevenueType.Length, convertEnumArrToInArr(adRevenueType));
+                                appsFlyerAndroid.CallStatic("start", cls_Application, adRevenueTypes.Length, convertEnumArrToInArr(adRevenueTypes));
                 }
             } 
 
@@ -83,7 +83,7 @@ namespace AppsFlyerSDK
 #if UNITY_IOS && !UNITY_EDITOR
         
     [DllImport("__Internal")]
-    private static extern void _start(int length, params AppsFlyerAdRevenueType[] adRevenueType);
+    private static extern void _start(int length, params AppsFlyerAdRevenueType[] adRevenueTypes);
 
     [DllImport("__Internal")]
     private static extern void _setIsDebugAdrevenue(bool isDebug);
@@ -151,7 +151,7 @@ namespace AppsFlyerSDK
         private static int[] convertEnumArrToInArr(AppsFlyerAdRevenueType[] adRevenueType)
         {
             return Array.ConvertAll<AppsFlyerAdRevenueType, int>(
-                   adRevenueType, delegate (AppsFlyerAdRevenueType value) { Debug.Log(value);  Debug.Log((int)value);  return (int)value; });
+                   adRevenueType, delegate (AppsFlyerAdRevenueType value) { return (int)value; });
         }
     }
 

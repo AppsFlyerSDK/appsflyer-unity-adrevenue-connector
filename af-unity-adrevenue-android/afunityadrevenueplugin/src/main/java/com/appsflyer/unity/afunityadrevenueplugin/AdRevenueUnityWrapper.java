@@ -16,12 +16,12 @@ public class AdRevenueUnityWrapper {
      *
      * @param application
      */
-    public static void start(Application application,int lenght, int... AdRevenueType) {
+    public static void start(Application application,int lenght, int... AdRevenueTypes) {
         AppsFlyerAdRevenue.initialize(new AppsFlyerAdRevenue.Builder(application)
                 .build());
         if (lenght > 0) {
             for (int i = 0; i < lenght;  i++) {
-                setAppsFlyerAdRevenueType(AdRevenueType[i]);
+                setAppsFlyerAdRevenueType(AdRevenueTypes[i]);
             }
         }
     }

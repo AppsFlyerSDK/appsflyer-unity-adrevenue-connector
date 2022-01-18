@@ -25,8 +25,6 @@ extern "C" {
     
     void setAppsFlyerAdRevenueType(int type){
         switch (type){
-            case 0:
-                break;
             case 1:
                 AdRevenueTypeMoPub = YES;
                 break;
@@ -47,10 +45,10 @@ extern "C" {
         }
     }
     
-    const void _start(int length, int* adRevenueType){
-        if(length > 0 && adRevenueType) {
+    const void _start(int length, int* adRevenueTypes){
+        if(length > 0 && adRevenueTypes) {
             for(int i = 0; i < length; i++) {
-                setAppsFlyerAdRevenueType(adRevenueType[i]);
+                setAppsFlyerAdRevenueType(adRevenueTypes[i]);
             }
         }
         
