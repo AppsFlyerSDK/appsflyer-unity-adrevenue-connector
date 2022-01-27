@@ -14,7 +14,7 @@
 
 ## <a id="installation"> 📲 Installation
    
-   This plugin requires minumium AppsFlyer Unity plugin version >= 4.22.x.
+   This plugin requires minimum AppsFlyer Unity plugin version >= 4.22.x.
 
 > ⚠️ There are breaking changes when upgrading from version 1.x to 2.x <br> Starting from v2.x, the plugin uses the The External Dependency Manager for Unity. <br> To support these changes first remove all the files from v1.x and only after that add the v2.x unity package.
 
@@ -51,7 +51,8 @@ public class AppsFlyerObjectScript : MonoBehaviour
     dic.Add("af_quantity", "1");
     AppsFlyerAdRevenue.logAdRevenue("facebook", AppsFlyerAdRevenueMediationNetworkType.AppsFlyerAdRevenueMediationNetworkTypeMoPub, 0.026, "USD", dic);
 }
-
+```
+   
 ## Mopub
 ---
 ```c#
