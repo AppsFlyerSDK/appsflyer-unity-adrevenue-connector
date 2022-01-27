@@ -23,13 +23,13 @@
     * Go to Assets >> Import Package >> Custom Package
     * Select appsflyer-unity-adrevenue-plugin-x.x.x.unitypackage.
 
-**Note:** You must have the AppsFlyer SDK already in your project. In addition, make sure to init AppsFlyer SDK before AppsFlyerAdRevenue.
+**Note:** You must have the [AppsFlyer Unity plugin](https://github.com/AppsFlyerSDK/appsflyer-unity-plugin) already in your project. In addition, make sure to init AppsFlyer SDK before AppsFlyerAdRevenue.
 
 ## <a id="init-sdk"> 🚀 Initialization
 
 ## AdRevenue-Generic
 ---
-From version `6.4.2` AppsFlyer-AdRevenue provides additional new api that allow you send data from the impression payload to AdRevenue no matter which mediation network you use:
+From version `6.4.3` of AppsFlyer-AdRevenue, we provide an additional new api that allow you send data from the impression payload to AdRevenue no matter which mediation network you use:
 
 ---
 ```c#
