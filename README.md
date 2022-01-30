@@ -1,6 +1,6 @@
 <img src="https://www.appsflyer.com/wp-content/uploads/2016/11/logo-1.svg"  width="450">
 
-# appsflyer-unity-adrevenue-plugin
+# appsflyer-unity-adrevenue-connector
 
 🛠 In order for us to provide optimal support, we would kindly ask you to submit any issues to support@appsflyer.com
 
