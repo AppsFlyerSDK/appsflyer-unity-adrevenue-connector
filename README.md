@@ -6,6 +6,10 @@
 
 *When submitting an issue please specify your AppsFlyer sign-up (account) email , your app ID , production steps, logs, code snippets and any additional relevant information.*
 
+## ❗ Disclaimer❗
+
+For now, the adrevenue connector is working with AppsFlyer-unity-plugin up until v6.4.41
+
 ## Table of content
 
 - [Installation](#installation)
