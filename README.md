@@ -6,9 +6,6 @@
 
 *When submitting an issue please specify your AppsFlyer sign-up (account) email , your app ID , production steps, logs, code snippets and any additional relevant information.*
 
-## ❗ Disclaimer❗
-
-For now, the adrevenue connector is working with AppsFlyer-unity-plugin up until v6.4.41
 
 ## Table of content
 
@@ -18,7 +15,7 @@ For now, the adrevenue connector is working with AppsFlyer-unity-plugin up until
 
 ## <a id="installation"> 📲 Installation
    
-   This plugin requires minimum AppsFlyer Unity plugin version >= 4.22.x.
+   This plugin requires the AppsFlyer Unity plugin version >= 4.22.x. and <= 6.4.41
 
 > ⚠️ There are breaking changes when upgrading from version 1.x to 2.x <br> Starting from v2.x, the plugin uses the The External Dependency Manager for Unity. <br> To support these changes first remove all the files from v1.x and only after that add the v2.x unity package.
 
