@@ -124,6 +124,10 @@ namespace AppsFlyerSDK
                     return 8;
                 case AppsFlyerAdRevenueMediationNetworkType.AppsFlyerAdRevenueMediationNetworkTypeYandex:
                     return 9;
+                case AppsFlyerAdRevenueMediationNetworkType.AppsFlyerAdRevenueMediationNetworkTypeChartBoost:
+                    return 10;
+                case AppsFlyerAdRevenueMediationNetworkType.AppsFlyerAdRevenueMediationNetworkTypeUnity:
+                    return 11;
                 default:
                     return -1;
             }
@@ -175,7 +179,9 @@ namespace AppsFlyerSDK
         AppsFlyerAdRevenueMediationNetworkTypeAdmost = 7,
         AppsFlyerAdRevenueMediationNetworkTypeTopon = 8,
         AppsFlyerAdRevenueMediationNetworkTypeTradplus = 9,
-        AppsFlyerAdRevenueMediationNetworkTypeYandex = 10
+        AppsFlyerAdRevenueMediationNetworkTypeYandex = 10,
+        AppsFlyerAdRevenueMediationNetworkTypeChartBoost = 11,
+        AppsFlyerAdRevenueMediationNetworkTypeUnity = 12
 
     }
 
