@@ -25,19 +25,19 @@ extern "C" {
     
     void setAppsFlyerAdRevenueType(int type){
         switch (type){
-            case 0:
+            case 1:
                 AdRevenueTypeMoPub = YES;
                 break;
-            case 1:
+            case 2:
                 AdRevenueTypeUnityAds = YES;
                 break;
-            case 2:
+            case 3:
                 AdRevenueTypeFacebookAudience = YES;
                 break;
-            case 3:
+            case 4:
                 AdRevenueTypeGoogleAdMob = YES;
                 break;
-            case 4:
+            case 5:
                 AdRevenueTypeAppLovin = YES;
                 break;
             default:
@@ -45,10 +45,10 @@ extern "C" {
         }
     }
     
-    const void _start(int length, int* adRevenueType){
-        if(length > 0 && adRevenueType) {
+    const void _start(int length, int* adRevenueTypes){
+        if(length > 0 && adRevenueTypes) {
             for(int i = 0; i < length; i++) {
-                setAppsFlyerAdRevenueType(adRevenueType[i]);
+                setAppsFlyerAdRevenueType(adRevenueTypes[i]);
             }
         }
         
@@ -57,6 +57,18 @@ extern "C" {
     const void _setIsDebugAdrevenue(bool isDebug){
         [[AppsFlyerAdRevenue shared] setIsDebug:isDebug];
     }
+
+    const void _logAdRevenue(const char* monetizationNetwork,
+                             int mediationNetwork,
+                             double eventRevenue,
+                             const char* revenueCurrency,
+                             const char* additionalParameters){
+        [[AppsFlyerAdRevenue shared] logAdRevenueWithMonetizationNetwork:stringFromChar(monetizationNetwork)
+                                                        mediationNetwork:(AppsFlyerAdRevenueMediationNetworkType) mediationNetwork
+                                                            eventRevenue:[NSNumber numberWithDouble:eventRevenue]
+                                                         revenueCurrency:stringFromChar(revenueCurrency)
+                                                    additionalParameters:dictionaryFromJson(additionalParameters)];
+    }   
 }
 
 @end

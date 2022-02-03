@@ -1,3 +1,7 @@
+### 6.4.3
+* Support for AppsFlyerAdrevenue Generic
+* new API logAdRevenue to send impression to AdRevenue to any mediation networks
+
 ### 6.4.2
 * Updated AppsFlyer-AdRevenue-MoPub to version 6.4.2
 
