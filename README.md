@@ -1,5 +1,7 @@
 <img src="https://www.appsflyer.com/wp-content/uploads/2016/11/logo-1.svg"  width="450">
 
+[DEPRECATED] Please note that this repo is deprecated and was moved to https://github.com/AppsFlyerSDK/appsflyer-unity-adrevenue-generic-connector
+
 # appsflyer-unity-adrevenue-connector
 
 🛠 In order for us to provide optimal support, we would kindly ask you to submit any issues to support@appsflyer.com
